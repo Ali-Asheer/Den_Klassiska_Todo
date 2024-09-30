@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(rgb(167 224 255 / 94%) 0%, rgb(0 47 175));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 400px;
+  min-height: 600px;
+}
+
+h1,p {
+margin: 0;
+}
+
+.btn {
+  background-color: aqua;
+  border: none;
+  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  font-size: 3.5rem;
+  line-height: 35px;
+  cursor: pointer;
+  text-indent: -4px;
+}
+
+.material-symbols-outlined {
+  background-color: rgb(117 33 33);
+  color: white;
+  width: 2.3rem;
+  height: 2.3rem;
+  cursor: pointer;
+  display: inline-block;
+  border: 0.06rem solid rgb(219, 242, 44);
+  border-radius: 30%;
+  text-indent:-1px;
+  font-variation-settings:
+      'FILL' 0,
+      'wght' 300,
+      'GRAD' 0,
+      'opsz' 24
+}
+
+.btn:hover{
+  background-color: rgb(240, 233, 30);
+  box-shadow: 1px 3px 15px rgb(255, 253, 225);
+}
+
+.inter-tight {
+  font-family: "Inter Tight", system-ui;
+  font-optical-sizing: 100px;
+  font-weight: 300;
+  font-style: normal;
+} 
+
+h1{
+  height: 5rem; 
+  font-size: 2.5rem;
+  color:rgba(250, 239, 152, 0.673);
+  text-align: center;
+  text-shadow:6px 9px 8px black, 2px 2px 0em #070837;
+}
+
+.tasks{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  border-radius: 1rem;
+  background-color: rgb(78 129 145 / 0%);
+  padding: 3rem;
+  width: 60%;
+  box-shadow: 6px 10px 20px rgb(0, 0, 0);
+  max-width: 30rem;
+  max-height: 60%;
+  padding: 5%;
+}
+
+#todoInput {
+  width: 100%;
+  border: 0.1rem solid rgba(0, 0, 0, 0.688);
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+  background-color:#a9d1ff;
+  box-shadow: 1px 3px 9px 0px rgb(0, 0, 0) inset;
+  color: #000000;
+} 
+
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: rgb(85, 45, 12);
+}
+
+.input {
+  display: flex;
+  justify-content:space-between;
+  gap: 1rem;
+  height: 2.5rem;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items:end;
+  gap: 1rem;
+  border-bottom: 1px solid #f3e928;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+div.todo-container1 {
+  width: 300px; 
+  word-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+  max-height: 60%;
+  width: 100%;
+  overflow-y:scroll;
+  background-color: rgba(9, 50, 67, 0.471);
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  box-shadow: 5px 8px 20px rgb(0, 0, 0) inset;
+} 
+
+.disabled {
+  color: #f7fb00;
+  text-decoration: line-through;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#todoList {
+  display: flex;
+  color: #FFEB3B;
+  align-items: center;
+}
+
+.scroll {
+  height: 15rem;
+  scrollbar-width: none;
+} 
+
+input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "\2713";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 0.06rem solid rgb(219, 242, 44);
+  border-radius: 30%;
+  color: transparent;
+}
+
+input[type="checkbox"]:checked::before {
+  color: white;
+  background-color: green;
+  border: 0.06rem solid rgb(219, 242, 44);
+  border-radius: 30%;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #06243d;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 125%;
+  left: 150%;
+  margin-left: -60px;
+  font-size: 1rem;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 15%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #06243d transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,6 +1,6 @@
-// initialize an empty array
+let todoArray = JSON.parse(localStorage.getItem('taskTodo')) || [];   // initialize an empty array
 
-let todoArray = JSON.parse(localStorage.getItem('taskTodo')) || [];
+
 const todoInput = document.getElementById('todoInput');
 const todoList = document.getElementById('todoList');
 const addButton = document.querySelector('.btn');
